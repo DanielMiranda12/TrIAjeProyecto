@@ -23,9 +23,17 @@ function addPatient() {
       description,
       currentTime
     };
+
+    // Comprobar si el paciente es menor de edad
     if (age < 18) {
-      alert(`Paciente menor de edad detectado con nivel de emergencia ${emergencyLevel}. Atender Inmediatamente`);
+      alert(`Paciente menor de edad detectado con nivel de emergencia ${emergencyLevel}. atender inmediatamente`);
     }
+
+    // Alerta para niveles de emergencia 1 y 2
+    if (emergencyLevel === 1 || emergencyLevel === 2) {
+      alert(`Atención a los médicos de turno: Paciente con nivel de emergencia ${emergencyLevel}.`);
+    }
+
     patients.push(patient);
     patients.sort((a, b) => a.emergencyLevel - b.emergencyLevel);
     renderPatientList();
