@@ -1,0 +1,135 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #b6b5b5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.header {
+  width: 100%;
+  padding: 10px;
+  background-color: #3a4cc6;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-register {
+  display: flex;
+  align-items: center;
+}
+
+.login-register label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.login-register a button {
+  background-color: #fff;
+  color: #3a4cc6;
+  border: 2px solid #3a4cc6;
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.login-register a button:hover {
+  background-color: #3a4cc6;
+  color: #fff;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin-top: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container > div {
+  margin-bottom: 15px;
+}
+
+.container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.container input[type="text"],
+.container input[type="number"],
+.container select,
+.container textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.container button {
+  background-color: #3a4cc6;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.container button:hover {
+  background-color: #2c3fa6;
+}
+
+.emergency-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.emergency-buttons button {
+  flex: 1;
+  margin-right: 5px;
+  background-color: #3a4cc6;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.emergency-buttons button:last-child {
+  margin-right: 0;
+}
+
+.emergency-buttons button.selected {
+  background-color: #1a237e;
+}
+
+#patients,
+#totalPatients {
+  margin-top: 20px;
+}
+
+#patientList {
+  list-style-type: decimal;
+  padding-left: 20px;
+}

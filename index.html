@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triaje AI en Hospital</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="header">
+    <div class="login-register">
+      <label>Roles:</label>
+      <a href="IC/inicioSesion.html">
+        <button>Iniciar sesión</button>
+      </a>
+    </div>
+  </div>
+  <div class="container">
+    <h1>Triaje AI en Hospital</h1>
+    <div>
+      <label for="name">Nombre del paciente:</label>
+      <input type="text" id="name" required>
+    </div>
+    <div>
+      <label for="id">CC del paciente:</label>
+      <input type="text" id="id" required>
+    </div>
+    <div>
+      <label for="age">Edad del paciente:</label>
+      <input type="number" id="age" required>
+    </div>
+    <div>
+      <label for="gender">Género:</label>
+      <select id="gender" onchange="showPregnancyInput()" required>
+        <option value="masculino">Masculino</option>
+        <option value="femenino">Femenino</option>
+      </select>
+    </div>
+    <div id="pregnancyInput" style="display: none;">
+      <label for="pregnant">¿Está embarazada?</label>
+      <select id="pregnant">
+        <option value="no">No</option>
+        <option value="si">Sí</option>
+      </select>
+    </div>
+    <div>
+      <label for="emergency">Tipo de emergencia:</label>
+      <div class="emergency-buttons">
+        <button onclick="setEmergencyLevel(1)">Nivel 1</button>
+        <button onclick="setEmergencyLevel(2)">Nivel 2</button>
+        <button onclick="setEmergencyLevel(3)">Nivel 3</button>
+        <button onclick="setEmergencyLevel(4)">Nivel 4</button>
+        <button onclick="setEmergencyLevel(5)">Nivel 5</button>
+      </div>
+    </div>
+    <div>
+      <label for="disease">Enfermedades Comunes:</label>
+      <select id="disease" required>
+        <option value="Infecciones respiratorias agudas">Infecciones respiratorias agudas</option>
+        <option value="Accidentes de tránsito">Accidentes de tránsito</option>
+        <option value="Enfermedades cardiovasculares">Enfermedades cardiovasculares</option>
+        <option value="Lesiones relacionadas con el trabajo">Lesiones relacionadas con el trabajo</option>
+        <option value="Intoxicaciones">Intoxicaciones</option>
+        <option value="Lesiones deportivas">Lesiones deportivas</option>
+        <option value="Traumas">Traumas</option>
+        <option value="Embarazada">Embarazada</option>
+        <option value="Otras">Otras</option>
+      </select>
+    </div>
+    <div>
+      <label for="description">Observaciones:</label>
+      <textarea id="description" rows="4" required></textarea>
+    </div>
+    <button onclick="addPatient()">Agregar Paciente</button>
+    <div id="patients">
+      <h2>Lista de Pacientes</h2>
+      <ol id="patientList"></ol>
+    </div>
+    <div id="totalPatients">
+      <h2>Total de Pacientes:</h2>
+      <p id="total"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
